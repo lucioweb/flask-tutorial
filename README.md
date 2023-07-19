@@ -1,7 +1,15 @@
+### FLASK-TUTORIAL
+O aplicativo usará um banco de dados SQLite para armazenar usuários e postagens. 
+Python vem com suporte embutido para SQLite no módulo sqlite3. 
+O SQLite é conveniente porque não requer a configuração de um servidor de banco de dados separado e é integrado ao Python. 
+No entanto, se as solicitações simultâneas tentarem gravar no banco de dados ao mesmo tempo, elas ficarão mais lentas à medida que cada gravação ocorrer sequencialmente. 
+Aplicativos pequenos não perceberão isso. 
+Depois de se tornar grande, você pode querer mudar para um banco de dados diferente.
+
 #### CAMINHO ONDE O PYTHON ESTÁ INSTALADO
 ```
 $ sudo whereis python3
-$ python3: /usr/bin/python3 /usr/lib/python3 /etc/python3 /usr/share/python3 /usr/share/man/man1/python3.1.gz
+python3: /usr/bin/python3 /usr/lib/python3 /etc/python3 /usr/share/python3 /usr/share/man/man1/python3.1.gz
 ```
 #### INSTALANDO O GERENCIADOR DE PACOTES PIP
 ```
@@ -60,3 +68,14 @@ O GNU Compiler Collection (chamado usualmente por GCC) é um conjunto de compila
 ```
 $ python3 app.py
 ```
+
+### Com a lib do Flask instalada no projeto, o comando será: `$ flask --app flaskr run`
+```
+$ flask --app flaskr run --debugger (Faz o debug e o reload do código)
+```
+
+### BANCO DE DADOS sqlite: `$ flask --app flaskr run`. Após isso será criado um arquivo chamdo `flaskr.sqlite` na *instance* do projeto.  
+```
+$ flask --app flaskr init-db
+```
+
